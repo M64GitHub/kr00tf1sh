@@ -33,7 +33,7 @@ This fact inspired the idea for implementing a proof of concept code that would
  - secretly execute other commands than the user wanted, then performing the users task
  - open the way for malware to gain root access due to desktop insecurity by design  
 
-(see kr00tf1sh.c for the final code)
+(see [kr00tf1sh.c](https://github.com/M64GitHub/kr00tf1sh/blob/main/krootfish.c) for the final code)
 
 Since this was a major flaw in my opinion, I contacted the KDE security mailing list 2007. Needless to say, they did not
 understand the problem at all, and asked for code. The problem though was not any code, it was **the design**. So I
