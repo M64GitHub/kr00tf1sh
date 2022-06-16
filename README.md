@@ -9,7 +9,7 @@ regard. Around that time was probably the peak of 'reverse code engineering' sit
 down already, most notably http://www.anticrack.de , but one of the most advanced ones was still highly active
 (http://www.woodman.com, where I was sysadmin for years, and initiated the linux RCE forum there).  
 
-****Reverse code engineering on linux platforms*** was not so much seen as an important skill to many, a typical argument would have been: "but
+***Reverse code engineering on linux platforms*** was not so much seen as an important skill to many, a typical argument would have been: "but
 there is the source code available". Keeping it short here, of course **static binary analysis** is a necessary skill
 when dealing with malware. gnu/linux malware also means shellcodes targeting network servers for example.  
 
