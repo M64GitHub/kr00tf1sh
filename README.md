@@ -1021,12 +1021,11 @@ manipulate its data. The fact that it is run in the context of our own user is
 the worst in terms of security, but the best for us to execute our own command.
 
 I think that whole concept has to be overthought. kdesu can not stay a process
-of he current logged in desktop user. It has in some way to protect itself from
+of the current logged in desktop user. It has in some way to protect itself from
 ptrace() based attacks.
 This could allready be done by running it SUID of another unprivileged system
-users id,
-
-
+users id, or ... the ptrace() interface would have to change in any way, 
+to prevent attaching to "foreign" processes.
 
 7 meet kroOtfish.c
 ===================
