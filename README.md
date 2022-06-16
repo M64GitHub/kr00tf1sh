@@ -16,8 +16,8 @@ when dealing with malware. gnu/linux malware also means shellcodes targeting net
 Around this time gnu/linux was really entering the desktop widely. Live bootable CDs like **knoppix** and **Ubuntu** became popular. People started using linux desktop systems like **GNOME** and **KDE** widely.  
 
 #### The ptrace() desaster
-Once I got deeper into the rabbit hole, I figured the **ptrace kernel interface** was a **security desaster** . Using
-ptrace system calls, it is possible to control processes (start, stop, halt, continue them), and more interestingly to
+Once I got deeper into the rabbit hole, I figured the **ptrace() kernel interface** was a **security desaster** . Using
+ptrace() system calls, it is possible to control processes (start, stop, halt, continue them), and more interestingly to
 **read and write their memory**. I played around a little and was able to **inject code into foreign processes** up to
 the point where I injected whole debuggers into binaries, that used ptrace() themselves. Just for fun :)  
 
@@ -40,7 +40,7 @@ understand the problem at all, and asked for code. The problem though was not an
 did not send them any code of course, it would have been useless. 
 
 After discussing the topic with my friends on woodman.com - instead, I matured the code, and wrote an article describing the problem. I knew, this kind of problem **could never be
-solved by any desktop system**, the only profound solution would be to **change the linux kernel / ptrace interface**.
+solved by any desktop system**, the only profound solution would be to **change the linux kernel / ptrace() interface**.
 
 ## The Result 
 
@@ -48,7 +48,7 @@ It took a few years to come, but now we have
 ```
 /proc/sys/kernel/yama/ptrace_scope
 ```
-to restrict ptrace's access scope:
+to restrict ptrace()'s access scope:
 
 ```
 0 - classic ptrace permissions:
