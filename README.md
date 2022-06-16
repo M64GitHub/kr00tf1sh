@@ -13,8 +13,7 @@ down already, most notably http://www.anticrack.de , but one of the most advance
 there is the source code available". Keeping it short here, of course **static binary analysis** is a necessary skill
 when dealing with malware. gnu/linux malware also means shellcodes targeting network servers for example.  
 
-Around this time gnu/linux was really entering the desktop widely. Live bootable CDs like **knoppix** and **Ubuntu** became popular.  
-People started using linux desktop systems like **GNOME** and **KDE** widely.  
+Around this time gnu/linux was really entering the desktop widely. Live bootable CDs like **knoppix** and **Ubuntu** became popular. People started using linux desktop systems like **GNOME** and **KDE** widely.  
 
 #### The ptrace() disaster
 Once I got deeper into the rabbit hole, I figured the **ptrace kernel interface** was a **security desaster** . Using
