@@ -5,7 +5,7 @@ linux desktop (KDE) security breach (2007) predating and suggesting ptrace_scope
 
 #### Foreword and setting the scene
 Back in the early 2000s I did a lot of virus related research. A journey that started 1994, when I first stumbled across the incredible [VLAD](https://www.wiw.org/~meta/) magazine. My focus around 2005 went on to GNU/linux systems in this
-regard. Around that time was probably the peak of 'reverse code engineering' sites and communities. A lot of them had been taken
+regard. Around that time was probably the peak of "reverse code engineering" sites and communities. A lot of them had been taken
 down already due to government concerns, most notably http://www.anticrack.de , but one of the most advanced ones was still highly active:
 http://www.woodman.com, where I was sysadmin for years (and founded the linux RCE forum there). 
 
