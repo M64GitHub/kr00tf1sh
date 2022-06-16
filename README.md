@@ -15,7 +15,7 @@ when dealing with malware. gnu/linux malware also means shellcodes targeting net
 
 Around this time gnu/linux was really entering the desktop widely. Live bootable CDs like **knoppix** and **Ubuntu** became popular. People started using linux desktop systems like **GNOME** and **KDE** widely.  
 
-#### The ptrace() disaster
+#### The ptrace() desaster
 Once I got deeper into the rabbit hole, I figured the **ptrace kernel interface** was a **security desaster** . Using
 ptrace system calls, it is possible to control processes (start, stop, halt, continue them), and more interestingly to
 **read and write their memory**. I played around a little and was able to **inject code into foreign processes** up to
