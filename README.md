@@ -31,7 +31,7 @@ This fact inspired the idea for implementing a proof of concept code that would
 
  - steal the entered password out of memory 
  - secretly execute other commands than the user wanted, then performing the users task
- - open the way for malware to gain root access due to desktop insecurity by design  
+ - -> open the way for malware to gain root access due to desktop insecurity by design  
 
 (see [kr00tf1sh.c](https://github.com/M64GitHub/kr00tf1sh/blob/main/krootfish.c) for the final code)
 
