@@ -6,8 +6,8 @@ linux desktop (KDE) security breach (2007) predating and suggesting ptrace_scope
 #### Foreword and setting the scene
 Back in the early 2000s I did a lot of virus related research. My focus around 2005 went on to gnu/linux systems in this
 regard. Around that time was probably the peak of 'reverse code engineering' sites and communities. A lot of them had been taken
-down already, most notably http://www.anticrack.de , but one of the most advanced ones was still highly active
-(http://www.woodman.com, where I was sysadmin for years, and initiated the linux RCE forum there).  
+down already, most notably http://www.anticrack.de , but one of the most advanced ones was still highly active:
+http://www.woodman.com, where I was sysadmin for years, and initiated the linux RCE forum there.
 
 ***Reverse code engineering on linux platforms*** was not so much seen as an important skill to many, a typical argument would have been: "but
 there is the source code available". Keeping it short here, of course **static binary analysis** is a necessary skill
