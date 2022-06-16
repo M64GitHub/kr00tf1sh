@@ -23,7 +23,7 @@ the point where I injected whole debuggers into binaries, that used ptrace() the
 
 As a former **KDE** user myself, and seeing how desktop security / privilege escalation was implemented, like in windows or mac based desktop
 systems, where a security dialogue pops up before ie critical system changes, I once quickly did a `ps -ef` to check
-under which system user this dialogue ran. Yes, it was ran as the logged in system user, wihout any protection.
+under which system user this dialogue ran. Yes, it was ran as the logged in system user, without any protection.
 
 I quickly verified on various **GNOME** based live CDs - same situation.  
 
