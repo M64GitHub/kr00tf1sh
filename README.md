@@ -2,6 +2,80 @@
 linux desktop (KDE) security breach (2007) predating and suggesting ptrace_scope into the kernel
 
 ## The Story
+Back in the early 2000s I did a lot of virus related research. My focus around 2005 went on to gnu/linux systems in this
+regard. Around that time was probably the peak of 'reverse code engineering' sites and communities. A lot of them had been taken
+down already, most notably http://www.anticrack.de , but one of the most advanced ones was still highly active
+(http://www.woodman.com, where I was sysadmin for years, and initiated the linux RCE forum there).  
+
+Reverse code engineering on linux platforms was not so much seen as an important skill to many, a typical argument would have been: "but
+there is the source code available". Keeping it short here, of course **static binary analysis** is a necessary skill
+when dealing with malware. gnu/linux malware also means shellcodes targeting network servers for example.  
+
+Arount this time gnu/linux was really entering the desktop widely. Live bootable CDs like knoppix became popular.  
+People started using linux desktop systems like GNOME and KDE widely.  
+
+Once I got deeper into the rabbit hole, I figured the **ptrace kernel interface** was a **security desaster** . Using
+ptrace system calls, it is possible to control processes (start, stop, halt, continue them), and more interestingly to
+**read and write their memory**. I played around a little and was able to **inject code into foreign processes** up to
+the point where I injected whole debuggers into binaries, that used ptrace() themselves. Just for fun :)  
+
+As a former **KDE** user myself, and seeing how desktop security / privilege escalation was implemented, like in windows or mac based desktop
+systems, where a security dialogue pops up before ie critical system changes I once quickly did a `ps -ef` to check
+under which system user this dialogue ran. Yes, it was ran as the logged in system user, wihout any protection.
+
+I quickly verified on various **GNOME** based live CDs - same situation.  
+
+This fact inspired the idea for implementing a proof of concept code that would
+
+ - steal the entered password out of memory 
+ - secretly execute other commands than the user wanted, then performing the users task
+ - open the way for malware to gain root access due to desktop insecurity by design
+
+Since this was a major flaw in my opinion, I contacted the KDE security mailing list 2007. Needless to say, they did not
+understand the problem at all, and asked for code. The problem though was not any code, it was **the design**. So I
+did not send them any code of course, it would have been useless. 
+
+Instead, I matured the code, and wrote an article describing the problem. I knew, this kind of problem **could never be
+solved by any desktop system**, the only profound solution would be to **change the linux kernel / ptrace interface**.
+
+## The Result 
+
+It took a few years to come, but now we have 
+```
+/proc/sys/kernel/yama/ptrace_scope
+```
+to restrict ptrace's access scope:
+
+```
+0 - classic ptrace permissions:
+
+    a process can PTRACE_ATTACH to any other process running under the same uid, 
+    as long as it is dumpable (i.e. did not transition uids, start privileged, 
+    or have called prctl(PR_SET_DUMPABLE...) already). 
+    Similarly, PTRACE_TRACEME is unchanged.
+
+1 - restricted ptrace:
+
+    a process must have a predefined relationship with the inferior it wants to 
+    call PTRACE_ATTACH on. By default, this relationship is that of only its 
+    descendants when the above classic criteria is also met. To change the 
+    relationship, an inferior can call prctl(PR_SET_PTRACER, debugger, ...) 
+    to declare an allowed debugger PID to call PTRACE_ATTACH on the inferior. 
+    Using PTRACE_TRACEME is unchanged.
+
+2 - admin-only attach:
+
+    only processes with CAP_SYS_PTRACE may use ptrace, either with PTRACE_ATTACH 
+    or through children calling PTRACE_TRACEME.
+
+3 - no attach:
+
+    no processes may use ptrace with PTRACE_ATTACH nor via PTRACE_TRACEME. 
+    Once set, this sysctl value cannot be changed.
+```
+
+Most gnu/linux based desktop systems nowadays have this value set to 1 by default, 
+but not all. Debian systems were reverting it back to 0 the last time I checked.
 
 
 ## The Article
