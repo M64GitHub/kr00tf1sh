@@ -2,18 +2,21 @@
 linux desktop (KDE) security breach (2007) predating and suggesting ptrace_scope into the kernel
 
 ## The Story
+
+#### Foreword and setting the scene
 Back in the early 2000s I did a lot of virus related research. My focus around 2005 went on to gnu/linux systems in this
 regard. Around that time was probably the peak of 'reverse code engineering' sites and communities. A lot of them had been taken
 down already, most notably http://www.anticrack.de , but one of the most advanced ones was still highly active
 (http://www.woodman.com, where I was sysadmin for years, and initiated the linux RCE forum there).  
 
-Reverse code engineering on linux platforms was not so much seen as an important skill to many, a typical argument would have been: "but
+****Reverse code engineering on linux platforms*** was not so much seen as an important skill to many, a typical argument would have been: "but
 there is the source code available". Keeping it short here, of course **static binary analysis** is a necessary skill
 when dealing with malware. gnu/linux malware also means shellcodes targeting network servers for example.  
 
-Arount this time gnu/linux was really entering the desktop widely. Live bootable CDs like knoppix became popular.  
-People started using linux desktop systems like GNOME and KDE widely.  
+Around this time gnu/linux was really entering the desktop widely. Live bootable CDs like **knoppix** and **Ubuntu** became popular.  
+People started using linux desktop systems like **GNOME** and **KDE** widely.  
 
+#### The ptrace() disaster
 Once I got deeper into the rabbit hole, I figured the **ptrace kernel interface** was a **security desaster** . Using
 ptrace system calls, it is possible to control processes (start, stop, halt, continue them), and more interestingly to
 **read and write their memory**. I played around a little and was able to **inject code into foreign processes** up to
