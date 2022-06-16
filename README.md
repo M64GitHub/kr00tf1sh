@@ -40,7 +40,10 @@ understand the problem at all, and asked for code. The problem though was not an
 did not send them any code of course, it would have been useless. 
 
 After discussing the topic with my friends on woodman.com - instead, I matured the code, and wrote an article describing the problem. I knew, this kind of problem **could never be
-solved by any desktop system**, the only profound solution would be to **change the linux kernel / ptrace() interface**.
+solved by any desktop system**, the only profound solution would be to **change the linux kernel / ptrace() interface**.  
+
+(The KDE people could of course change their kdesu mechanisms for this particular point. But kdesu is just an example, the principle applies to all user software.)
+The word was out, and I did not expect anything to change, the linux kernel the least.
 
 ## The Result 
 
