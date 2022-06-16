@@ -39,7 +39,7 @@ Since this was a major flaw in my opinion, I contacted the KDE security mailing 
 understand the problem at all, and asked for code. The problem though was not any code, it was **the design**. So I
 did not send them any code of course, it would have been useless. 
 
-After discussing the topic with my friends on woodmann.com - instead, I matured the code, and wrote an article describing the problem. I knew, this kind of problem **could never be
+After discussing the topic with my friends on woodman.com - instead, I matured the code, and wrote an article describing the problem. I knew, this kind of problem **could never be
 solved by any desktop system**, the only profound solution would be to **change the linux kernel / ptrace interface**.
 
 ## The Result 
