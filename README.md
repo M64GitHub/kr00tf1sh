@@ -31,7 +31,8 @@ This fact inspired the idea for implementing a proof of concept code that would
 
  - steal the entered password out of memory 
  - secretly execute other commands than the user wanted, then performing the users task
- - open the way for malware to gain root access due to desktop insecurity by design
+ - open the way for malware to gain root access due to desktop insecurity by design  
+
 (see kr00tf1sh.c for the final code)
 
 Since this was a major flaw in my opinion, I contacted the KDE security mailing list 2007. Needless to say, they did not
