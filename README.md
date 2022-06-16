@@ -81,6 +81,9 @@ to restrict ptrace's access scope:
 Most gnu/linux based desktop systems nowadays have this value set to 1 by default, 
 but not all. Debian systems were reverting it back to 0 the last time I checked.
 
+## The Code
+[kr00tf1sh.c](https://github.com/M64GitHub/kr00tf1sh/blob/main/krootfish.c)  
+
 
 ## The Article
 
