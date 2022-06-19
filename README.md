@@ -35,7 +35,7 @@ This fact inspired the idea for implementing a proof of concept code that would
 
 (see [kr00tf1sh.c](https://github.com/M64GitHub/kr00tf1sh/blob/main/krootfish.c) for the final code)
 
-Since this was a major flaw in my opinion, I contacted the KDE security mailing list in 2007. Needless to say, they did not
+Since this was a major flaw in my opinion, I contacted the KDE security mailing list in 2007. To my surprise, they did not
 understand the problem at all, and asked for code. The problem though was not any code, it was **the design**. So I
 did not send them any code of course, it would have been useless. 
 
