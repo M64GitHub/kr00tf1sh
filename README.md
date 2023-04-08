@@ -1,5 +1,5 @@
 # kr00tf1sh
-linux desktop (KDE) root-access security breach (2007) predating and suggesting ptrace_scope into the kernel
+linux desktop (KDE) root-access security breach (2007) suggesting ptrace_scope like solution into the kernel
 
 ## The Story
 
