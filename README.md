@@ -1,4 +1,4 @@
-# kr00tf1sh
+# kro0tf1sh
 linux desktop (KDE) root-access security breach (2007) suggesting ptrace_scope like solution into the kernel.
 
 Proof of concept code for kde based gnu/linux systems, that was able to:
